@@ -13,7 +13,7 @@ type Props = {
 
 function NFTRow({index}: {index: number}) {
     const contract = getContract(contractInfos.fakeNefturians)
-    const [value, setValue] = useState()
+    const [value, setValue] = useState<any>()
 
     const uri = useCall({
         contract,
@@ -89,7 +89,7 @@ function NFTList({supply}: Props) {
         </Thead>
         <Tbody>
             {results.map((result, index) => {
-                if (result?.value[0] === address) {
+                if (result?.value?.[0] === address) {
                     return <NFTRow key={index} index={index} />
                 }
             })}
