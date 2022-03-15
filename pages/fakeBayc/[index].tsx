@@ -138,7 +138,7 @@ export default function TokenIndex() {
         </Skeleton>
       </Center>
       <Table variant='simple'>
-        <TableCaption>Attributes {JSON.stringify(test)}</TableCaption>
+        <TableCaption>Attributes</TableCaption>
         <Thead>
           <Tr>
             <Th>Trait type</Th>
