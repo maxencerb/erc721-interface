@@ -68,8 +68,8 @@ export default function Topbar() {
                     bg={router.pathname === '/' ? 'gray.700' : 'transparent'}
                 />
                 <Show breakpoint='(min-width: 1100px)'>
-                    {Object.keys(links).map(key => ( <TopbarLink key={key} href={key}>
-                            {links[key].label}
+                    {Object.entries(links).map(kv => ( <TopbarLink key={kv[0]} href={kv[0]}>
+                            {kv[1].label}
                         </TopbarLink>
                         )
                     )} 
@@ -88,8 +88,8 @@ export default function Topbar() {
                         variant='outline'
                     />
                     <MenuList>
-                        {Object.keys(links).map(key => ( <MenuItem as='a' key={key} href={key}>
-                                {links[key].label}
+                        {Object.entries(links).map(kv => ( <MenuItem as='a' key={kv[0]} href={kv[0]}>
+                                {kv[1].label}
                             </MenuItem>
                             )
                         )} 
